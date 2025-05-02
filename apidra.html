@@ -2,18 +2,191 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>APIDRA Digital Notice</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #0073e6;
+      --secondary-color: #f8f9fa;
+      --accent-color: #e63946;
+      --text-color: #333;
+      --light-text: #666;
+      --background: #ffffff;
+      --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      --border-radius: 8px;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+      background-color: var(--secondary-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: var(--background);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      padding: 30px;
+      margin-top: 20px;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .logo {
+      max-width: 200px;
+      margin-bottom: 15px;
+    }
+    
+    h1 {
+      color: var(--primary-color);
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    
+    h2 {
+      font-size: 20px;
+      color: var(--light-text);
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+    
+    .section {
+      margin-bottom: 30px;
+      padding: 20px;
+      background-color: var(--secondary-color);
+      border-radius: var(--border-radius);
+    }
+    
+    .section-title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      font-size: 22px;
+      color: var(--primary-color);
+    }
+    
+    .section-title i {
+      margin-right: 10px;
+      font-size: 24px;
+    }
+    
+    .download-btn {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: white;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: var(--border-radius);
+      font-weight: 600;
+      transition: all 0.3s ease;
+      margin-top: 10px;
+      box-shadow: var(--shadow);
+    }
+    
+    .download-btn:hover {
+      background-color: #005bb5;
+      transform: translateY(-2px);
+    }
+    
+    .download-btn i {
+      margin-right: 8px;
+    }
+    
+    video {
+      width: 100%;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+    }
+    
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+      color: var(--light-text);
+    }
+    
+    .sanofi-logo {
+      max-width: 120px;
+      margin-top: 15px;
+    }
+    
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px;
+      }
+      
+      h1 {
+        font-size: 24px;
+      }
+      
+      h2 {
+        font-size: 18px;
+      }
+      
+      .section {
+        padding: 15px;
+      }
+      
+      .download-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+        display: block;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Injections</h1>
-
-  <h2>You can dowload the full apidra notice 📄 by clicking DOWLOAD below:</h2>
-  <a href="https://raw.githubusercontent.com/UmiiTsk/apidra/main/apidra notice.pdf" download>DOWLOAD</a>
- 
-  <h2>📽️ How to Use This Medicine</h2>
-  <video width="100%" controls>
-    <source src="https://raw.githubusercontent.com/UmiiTsk/apidra/main/apidra.mp4" type="video/mp4">
-  </video>
- 
+  <div class="container">
+    <div class="header">
+      <img src="/api/placeholder/200/80" alt="Apidra Logo" class="logo">
+      <h1>APIDRA Digital Notice</h1>
+      <h2>Important information about your medication</h2>
+    </div>
+    
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-file-pdf"></i> Patient Information Leaflet
+      </div>
+      <p>You can download the complete patient information leaflet for Apidra by clicking the button below:</p>
+      <a href="https://raw.githubusercontent.com/UmiiTsk/apidra/main/apidra%20notice.pdf" download class="download-btn">
+        <i class="fas fa-download"></i> DOWNLOAD PDF
+      </a>
+    </div>
+    
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-video"></i> How to Use This Medicine
+      </div>
+      <p>Watch this short video to learn the proper injection technique:</p>
+      <video controls>
+        <source src="https://raw.githubusercontent.com/UmiiTsk/apidra/main/apidra.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    
+    <div class="footer">
+      <p>For medical advice, please contact your healthcare provider.</p>
+      <p>© 2025 Sanofi. All rights reserved.</p>
+      <img src="/api/placeholder/120/40" alt="Sanofi Logo" class="sanofi-logo">
+    </div>
+  </div>
 </body>
 </html>
